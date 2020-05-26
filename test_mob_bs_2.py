@@ -1,5 +1,6 @@
 from mod_bs import modified_binary_search
 
+
 def test_no_overwrite_no_gap():
     assert modified_binary_search([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0) == 0, 'Boundary'
     assert modified_binary_search([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 1) == 1, 'Boundary +1'

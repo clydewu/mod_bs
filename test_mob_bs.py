@@ -1,5 +1,6 @@
 from mod_bs import find_val
 
+
 def test_no_overwrite_no_gap():
     assert find_val([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 0) == 0, 'Boundary'
     assert find_val([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 1) == 1, 'Boundary +1'
