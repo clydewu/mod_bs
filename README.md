@@ -26,14 +26,15 @@ If log exceed the limition, the new timestamp will be stored from the beginning 
   * Latest 2 elements of Array B (ts5 ~ ts6) is still `In-order`
   * Between ts12 and ts5 of Array B is an `overwritten point`.
 
-## QuestionGive a timestamp, detect whether this timestamp exist in the file.
+## Question
+Give a timestamp, detect whether this timestamp exist in the file.
 
 ## Solution 1
 `find_val(arr, val)`
-This function will find the oldest line,
-Separate the array to two section,
-Use the normal Binary Search for the section which contain the input value
-Time complexity is [Find the oldest line] + [A Binary Search] = log(n) + log(n) ~= still log(n)
+* This function will find the `overwritten point`
+* Separate the array to two section,
+* Use the normal Binary Search for the section which contain the input value
+* Time complexity is **Find the oldest line** + **A Binary Search** = log(n) + log(n) ~= still log(n)
 
 ## Solution 2 
 `modified_binary_search(arr, val)`
@@ -46,3 +47,4 @@ This function follow the origin process of Binary Search.
 * At most one `overwritten point` is existent at any array.
   * a.k.a. At most one `Out-of-order` sub-array exist.
   * If the target timestamp is not in the other `In-order` sub-array, and **maybe** in the `Out-of-Order` sub-array, then search this sub-array in the next loop of Binary Search. 
+* Time complexity is the same as **A Binary Search** = log(n)
