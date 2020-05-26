@@ -40,8 +40,9 @@ Give a timestamp, detect whether this timestamp exist in the file.
 `modified_binary_search(arr, val)`
 
 (TODO: Below descriptions need refine)
+
 This function follow the origin process of Binary Search.
-* A whole array may or may contain an `overwritten point`.
+* A whole array may or may not contain an `overwritten point`.
 * Binary Search will separate an array to two sub-arrays.
 * If one sub-array is `In-order` and its scope include the value we try to find, search this sub-array in the next loop of Binary Search, no matter whether an `overwritten point` is existent.
 * At most one `overwritten point` is existent at any array.
