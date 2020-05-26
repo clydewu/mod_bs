@@ -31,6 +31,7 @@ def find_oldest_line(arr):
     # array is ascending totally
     return idx_s
 
+
 def binary_search(arr, val):
     """Normal binary search """
     begin = 0
@@ -58,6 +59,4 @@ def find_val(arr, val):
     elif arr[oldest_line] <= val and arr[-1] >= val:
         ret = binary_search(arr[oldest_line:], val)
         return ret + oldest_line if ret is not None else None
-
-
 
