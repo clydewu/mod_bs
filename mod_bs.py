@@ -64,9 +64,9 @@ def modified_binary_search(arr, val):
             end = mid - 1
         elif arr[mid + 1] <= arr[end] and (arr[mid + 1] <= val and val <= arr[end]):
             begin = mid + 1
-        elif arr[begin] > arr[mid - 1] and not (val > arr[mid - 1] and val < arr[begin]):
+        elif arr[begin] > arr[mid - 1] and (val <= arr[mid - 1] or val >= arr[begin]):
             end = mid - 1
-        elif arr[mid + 1] > arr[end] and not (val > arr[end] and val < arr[mid + 1]):
+        elif arr[mid + 1] > arr[end] and (val <= arr[end] or val >= arr[mid + 1]):
             begin = mid + 1
         else:
             return None
