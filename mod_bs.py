@@ -5,6 +5,8 @@ def find_oldest_line(arr):
     """
     idx_s = 0
     idx_e = len(arr) - 1
+
+    # This is not necessary, we will also detect this case in the while-loop
     if arr[idx_s] < arr[idx_e]:
         return idx_s
 
@@ -17,14 +19,11 @@ def find_oldest_line(arr):
         # print(f'{arr[idx_s]} -- {arr[idx_m]} -- {arr[idx_e]}')
         if (idx_m == 0 or arr[idx_m] < arr[idx_m - 1]) \
                 and (idx_m == len(arr) -1 or arr[idx_m] < arr[idx_m + 1]):
-            print('m is the oldest')
             return idx_m
 
         if arr[idx_s] > arr[idx_m]:
-            print('Search Upper')
             idx_e = idx_m 
         elif arr[idx_m] > arr[idx_e]:
-            print('Search Lower')
             idx_s = idx_m
         else:
             break
