@@ -26,7 +26,8 @@ If log exceed the limition, the new timestamp will be stored from the beginning 
   * Latest 2 elements of Array B (ts5 ~ ts6) is still `In-order`
   * Between ts12 and ts5 of Array B is an `overwritten point`.
 
-## QuestionGive a timestamp, detect whether this timestamp exist in the file.
+## Question
+Give a timestamp, detect whether this timestamp exist in the file.
 
 ## Solution 1
 `find_val(arr, val)`
