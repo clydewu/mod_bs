@@ -55,14 +55,14 @@ def modified_binary_search(arr, val):
     end = len(arr) - 1
 
     while begin <= end:
-        import pdb; pdb.set_trace()
+        # import pdb; pdb.set_trace()
         mid = (begin + end) // 2
         if arr[mid] == val:
             return mid
-        elif arr[begin] < arr[mid - 1] and (arr[begin] <= val and val <= arr[mid - 1]):
+        elif arr[begin] <= arr[mid - 1] and (arr[begin] <= val and val <= arr[mid - 1]):
             # this section has no ow, and our value is inside, use normal bs
             end = mid - 1
-        elif arr[mid + 1] < arr[end] and (arr[mid + 1] <= val and val <= arr[end]):
+        elif arr[mid + 1] <= arr[end] and (arr[mid + 1] <= val and val <= arr[end]):
             begin = mid + 1
         elif arr[begin] > arr[mid - 1] and not (val > arr[mid - 1] and val < arr[begin]):
             #if val > arr[mid - 1] and val < arr[begin]:
